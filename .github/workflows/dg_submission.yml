@@ -1,0 +1,16 @@
+name: Dependency Graph and Dependabot Scan
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  dependency_graph:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Submit Maven Dependency Tree to Dependency Graph
+        uses: raviqqe/maven-dependency-tree-dependency-submission@v2
