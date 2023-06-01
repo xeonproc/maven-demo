@@ -14,4 +14,7 @@ jobs:
 
       - name: Maven Dependency Tree Dependency Submission
         uses: advanced-security/maven-dependency-submission-action@v3.0.2
+        with:
+          directory: "/"
+          token: ${GITHUB_PAT}
 
